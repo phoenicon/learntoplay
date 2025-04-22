@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress - Charlie's Exam Hub</title>
+  <meta name="description" content="Track your exam revision progress">
+  <meta name="author" content="LearnToPlay.ai">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">📚</span>
+          Charlie's Exam Hub
+        </a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">
+            <span>🏠</span>
+            Dashboard
+          </a>
+          <a href="exams.html" class="nav-link">
+            <span>📅</span>
+            Exams
+          </a>
+          <a href="progress.html" class="nav-link active">
+            <span>📊</span>
+            Progress
+          </a>
+          <a href="resources.html" class="nav-link">
+            <span>📚</span>
+            Resources
+          </a>
+          <a href="tools.html" class="nav-link">
+            <span>🛠️</span>
+            Tools
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">
+      <span class="section-icon">📊</span>
+      Progress Dashboard
+    </h1>
+    
+    <!-- Time Machine Controls -->
+    <section class="time-machine-controls">
+      <span>🕰️ Time Machine:</span>
+      <input type="date" id="time-machine-date" class="time-machine-date">
+      <button id="time-travel-btn" class="time-machine-btn">View Past Progress</button>
+      <button id="return-present-btn" class="time-machine-btn">Return to Present</button>
+    </section>
+    
+    <div class="tab-container">
+      <div class="tabs">
+        <div class="tab active" data-target="overview-tab">Overview</div>
+        <div class="tab" data-target="topics-tab">Topics</div>
+        <div class="tab" data-target="confidence-tab">Confidence</div>
+        <div class="tab" data-target="analytics-tab">Analytics</div>
+      </div>
+      
+      <!-- Overview Tab -->
+      <div id="overview-tab" class="tab-content">
+        <h2>📊 Progress Overview</h2>
+        
+        <div class="subject-grid">
+          <div class="subject-card">
+            <div class="subject-color color-geography"></div>
+            <div class="subject-content">
+              <h3 class="subject-title">
+                <span>🌍</span>
+                Geography
+              </h3>
+              <p class="subject-info">Advanced Level • 2 Papers</p>
+              
+              <div class="progress-wrapper">
+                <div class="progress-info">
+                  <span>Overall Progress</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-value progress-geography"></div>
+                </div>
+              </div>
+              
+              <div class="subject-footer">
+                <div class="subject-meta">
+                  <div class="meta-item">
+                    <span>📝</span>
+                    4 Topics
+                  </div>
+                  <div class="meta-item">
+                    <span>📊</span>
+                    2 Practice Papers
+                  </div>
+                </div>
+                <a href="geography.html" class="btn btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="subject-card">
+            <div class="subject-color color-psychology"></div>
+            <div class="subject-content">
+              <h3 class="subject-title">
+                <span>🧠</span>
+                Psychology
+              </h3>
+              <p class="subject-info">Advanced Level • 3 Papers</p>
+              
+              <div class="progress-wrapper">
+                <div class="progress-info">
+                  <span>Overall Progress</span>
+                  <span>60%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-value progress-psychology"></div>
+                </div>
+              </div>
+              
+              <div class="subject-footer">
+                <div class="subject-meta">
+                  <div class="meta-item">
+                    <span>📝</span>
+                    6 Topics
+                  </div>
+                  <div class="meta-item">
+                    <span>📊</span>
+                    1 Practice Paper
+                  </div>
+                </div>
+                <a href="psychology.html" class="btn btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="subject-card">
+            <div class="subject-color color-sociology"></div>
+            <div class="subject-content">
+              <h3 class="subject-title">
+                <span>👥</span>
+                Sociology
+              </h3>
+              <p class="subject-info">Advanced Level • 3 Papers</p>
+              
+              <div class="progress-wrapper">
+                <div class="progress-info">
+                  <span>Overall Progress</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-value progress-sociology"></div>
+                </div>
+              </div>
+              
+              <div class="subject-footer">
+                <div class="subject-meta">
+                  <div class="meta-item">
+                    <span>📝</span>
+                    5 Topics
+                  </div>
+                  <div class="meta-item">
+                    <span>📊</span>
+                    3 Practice Papers
+                  </div>
+                </div>
+                <a href="sociology.html" class="btn btn-sm">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3>📋 Recent Activity</h3>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Activity</th>
+                <th>Subject</th>
+                <th>Confidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apr 20, 2025</td>
+                <td>Cornell Notes</td>
+                <td class="accent-psychology">Psychology - Biopsychology</td>
+                <td>😎 Pretty solid</td>
+              </tr>
+              <tr>
+                <td>Apr 19, 2025</td>
+                <td>Practice Answer</td>
+                <td class="accent-geography">Geography - Water Cycle</td>
+                <td>🔥 Super confident</td>
+              </tr>
+              <tr>
+                <td>Apr 18, 2025</td>
+                <td>Cornell Notes</td>
+                <td class="accent-psychology">Psychology - OCD</td>
+                <td>😐 Bit unsure</td>
+              </tr>
+              <tr>
+                <td>Apr 17, 2025</td>
+                <td>Practice Paper</td>
+                <td class="accent-sociology">Sociology - Paper 1</td>
+                <td>😎 Pretty solid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Topics Tab -->
+      <div id="topics-tab" class="tab-content hidden">
+        <h2>📝 Topics Progress</h2>
+        
+        <h3>🧠 Psychology Topics</h3>
+        <ul class="resource-list">
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>Psychopathology</strong>
+                <div>Done (Cornell Panel)</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>Biopsychology</strong>
+                <div>Done (Cornell Panel)</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>Research Methods</strong>
+                <div>Not started</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>Relationships</strong>
+                <div>Not started</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>🌍 Geography Topics</h3>
+        <ul class="resource-list">
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>Water & Carbon Cycle</strong>
+                <div>Done (Cornell Panel)</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>Hazard Case Studies</strong>
+                <div>To do</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>Urban Environments</strong>
+                <div>To do</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>Global Governance & Systems</strong>
+                <div>To do</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>✍️ Skills Practice</h3>
+        <ul class="resource-list">
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>20 Marker Planner</strong>
+                <div>Complete</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">⬜</span>
+              <div>
+                <strong>9 Marker Template</strong>
+                <div>To build</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>Daily Tracker</strong>
+                <div>Active</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="resource-link">
+              <span class="resource-list-icon">✅</span>
+              <div>
+                <strong>Answer Writer</strong>
+                <div>Ready for use</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Confidence Tab -->
+      <div id="confidence-tab" class="tab-content hidden">
+        <h2>🎯 Confidence Tracker</h2>
+        
+        <div class="card">
+          <h3>How confident are you overall right now?</h3>
+          <select id="overall-confidence" style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;">
+            <option value="5">🔥 Feeling sharp</option>
+            <option value="4">💪 Doing well</option>
+            <option value="3" selected>😐 Okay but unsure</option>
+            <option value="2">😬 Feeling behind</option>
+            <option value="1">🧠 Bit lost today</option>
+          </select>
+          <button class="btn">Update Confidence</button>
+        </div>
+        
+        <h3>Subject Confidence</h3>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Topic</th>
+                <th>Last Updated</th>
+                <th>Confidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="accent-psychology">Psychology</td>
+                <td>Psychopathology</td>
+                <td>Apr 18, 2025</td>
+                <td>😐 Bit unsure</td>
+              </tr>
+              <tr>
+                <td class="accent-psychology">Psychology</td>
+                <td>Biopsychology</td>
+                <td>Apr 20, 2025</td>
+                <td>😎 Pretty solid</td>
+              </tr>
+              <tr>
+                <td class="accent-geography">Geography</td>
+                <td>Water & Carbon Cycle</td>
+                <td>Apr 19, 2025</td>
+                <td>🔥 Super confident</td>
+              </tr>
+              <tr>
+                <td class="accent-sociology">Sociology</td>
+                <td>Education</td>
+                <td>Apr 17, 2025</td>
+                <td>😎 Pretty solid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p style="font-style: italic; margin-top: 1rem;">Keep showing up. One tick at a time = your B or better is coming.</p>
+      </div>
+      
+      <!-- Analytics Tab -->
+      <div id="analytics-tab" class="tab-content hidden">
+        <h2>📈 Analytics</h2>
+        
+        <!-- Pinecone Integration Section -->
+        <section class="api-integration-section">
+          <h2 class="api-integration-title">
+            AI-Powered Analytics
+            <span id="analytics-status" class="api-status disconnected">Disconnected</span>
+          </h2>
+          <p>Your learning patterns are analyzed using Twelve Labs AI and Pinecone vector database to provide personalized insights.</p>
+          
+          <div class="api-placeholder">
+            // API Integration Point: Twelve Labs AI + Pinecone
+            // This section will display AI-generated analytics about your
+            // learning patterns, strengths, and areas for improvement.
+          </div>
+          
+          <div class="subject-footer">
+            <div class="subject-meta">
+              <div class="meta-item">
+                <span>🧠</span>
+                AI-Powered
+              </div>
+              <div class="meta-item">
+                <span>🔄</span>
+                Auto-updating
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <h3>Study Time Distribution</h3>
+        <div class="card">
+          <div class="api-placeholder">
+            // This section will display charts showing your study time
+            // distribution across subjects and topics.
+            // Data will be pulled from your Daily Focus Tracker entries.
+          </div>
+        </div>
+        
+        <h3>Confidence Trends</h3>
+        <div class="card">
+          <div class="api-placeholder">
+            // This section will display charts showing your confidence
+            // trends over time for each subject.
+            // Data will be pulled from your Confidence Tracker entries.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Keep going. Small steps every day lead to big results.</p>
+      <p class="copyright">© 2025 Charlie's Exam Hub • Powered by AI</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

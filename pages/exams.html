@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exams - Charlie's Exam Hub</title>
+  <meta name="description" content="Exam schedule and preparation">
+  <meta name="author" content="LearnToPlay.ai">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">📚</span>
+          Charlie's Exam Hub
+        </a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">
+            <span>🏠</span>
+            Dashboard
+          </a>
+          <a href="exams.html" class="nav-link active">
+            <span>📅</span>
+            Exams
+          </a>
+          <a href="progress.html" class="nav-link">
+            <span>📊</span>
+            Progress
+          </a>
+          <a href="resources.html" class="nav-link">
+            <span>📚</span>
+            Resources
+          </a>
+          <a href="tools.html" class="nav-link">
+            <span>🛠️</span>
+            Tools
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">
+      <span class="section-icon">📅</span>
+      Exam Schedule
+    </h1>
+    
+    <section class="countdown-panel">
+      <h2 class="next-exam">Next Exam: Geography Adv Paper 1</h2>
+      <div class="countdown" id="countdown">24 days</div>
+      <p>Tuesday, May 13, 2025 • 9:00 AM • RHSH</p>
+    </section>
+    
+    <div class="tab-container">
+      <div class="tabs">
+        <div class="tab active" data-target="all-exams-tab">All Exams</div>
+        <div class="tab" data-target="geography-tab">Geography</div>
+        <div class="tab" data-target="psychology-tab">Psychology</div>
+        <div class="tab" data-target="sociology-tab">Sociology</div>
+      </div>
+      
+      <!-- All Exams -->
+      <div id="all-exams-tab" class="tab-content">
+        <h2>📅 Complete Exam Schedule</h2>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Subject</th>
+              <th>Paper</th>
+              <th>Location</th>
+              <th>Days Left</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>May 13, 2025</td>
+              <td>9:00 AM - 11:30 AM</td>
+              <td class="accent-geography">Geography</td>
+              <td>Paper 1: Physical Geography</td>
+              <td>RHSH</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td>May 19, 2025</td>
+              <td>1:00 PM - 3:00 PM</td>
+              <td class="accent-psychology">Psychology</td>
+              <td>Paper 1: Introductory Topics</td>
+              <td>RHSH</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>May 22, 2025</td>
+              <td>9:00 AM - 11:00 AM</td>
+              <td class="accent-sociology">Sociology</td>
+              <td>Paper 1: Education with Theory</td>
+              <td>RHSH</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>May 27, 2025</td>
+              <td>9:00 AM - 11:30 AM</td>
+              <td class="accent-geography">Geography</td>
+              <td>Paper 2: Human Geography</td>
+              <td>RHSH</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td>June 3, 2025</td>
+              <td>1:00 PM - 3:00 PM</td>
+              <td class="accent-psychology">Psychology</td>
+              <td>Paper 2: Psychology in Context</td>
+              <td>RHSH</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td>June 10, 2025</td>
+              <td>9:00 AM - 11:00 AM</td>
+              <td class="accent-sociology">Sociology</td>
+              <td>Paper 2: Topics in Sociology</td>
+              <td>RHSH</td>
+              <td>52</td>
+            </tr>
+            <tr>
+              <td>June 17, 2025</td>
+              <td>1:00 PM - 3:00 PM</td>
+              <td class="accent-psychology">Psychology</td>
+              <td>Paper 3: Issues & Options</td>
+              <td>RHSH</td>
+              <td>59</td>
+            </tr>
+            <tr>
+              <td>June 19, 2025</td>
+              <td>9:00 AM - 11:00 AM</td>
+              <td class="accent-sociology">Sociology</td>
+              <td>Paper 3: Crime & Deviance</td>
+              <td>RHSH</td>
+              <td>61</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Geography Exams -->
+      <div id="geography-tab" class="tab-content hidden">
+        <h2>🌍 Geography Exams</h2>
+        
+        <div class="exam-cards">
+          <div class="exam-card geography">
+            <h3 class="exam-title">Geography Adv Paper 1</h3>
+            <p class="exam-date">Tuesday, May 13, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              9:00 AM - 11:30 AM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Water & Carbon Cycles, Hazards
+            </div>
+            <div class="days-left urgent" data-days="24">24 days left</div>
+          </div>
+          
+          <div class="exam-card geography">
+            <h3 class="exam-title">Geography Adv Paper 2</h3>
+            <p class="exam-date">Tuesday, May 27, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              9:00 AM - 11:30 AM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Global Systems, Urban Environments
+            </div>
+            <div class="days-left comfortable" data-days="38">38 days left</div>
+          </div>
+        </div>
+        
+        <h3>📋 Geography Revision Checklist</h3>
+        
+        <div class="card">
+          <h4>Paper 1: Physical Geography</h4>
+          <ul class="resource-list">
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">✅</span>
+                <div>
+                  <strong>Water & Carbon Cycles</strong>
+                  <div>Cornell notes completed, case studies needed</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">⚠️</span>
+                <div>
+                  <strong>Hazards</strong>
+                  <div>Need to review volcanic/seismic case studies</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <h4>Paper 2: Human Geography</h4>
+          <ul class="resource-list">
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">⚠️</span>
+                <div>
+                  <strong>Global Systems & Governance</strong>
+                  <div>Need to review international trade</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">⚠️</span>
+                <div>
+                  <strong>Urban Environments</strong>
+                  <div>Need to complete case studies</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Psychology Exams -->
+      <div id="psychology-tab" class="tab-content hidden">
+        <h2>🧠 Psychology Exams</h2>
+        
+        <div class="exam-cards">
+          <div class="exam-card psychology">
+            <h3 class="exam-title">Psychology Paper 1</h3>
+            <p class="exam-date">Monday, May 19, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              1:00 PM - 3:00 PM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Psychopathology, Biopsychology
+            </div>
+            <div class="days-left near" data-days="30">30 days left</div>
+          </div>
+          
+          <div class="exam-card psychology">
+            <h3 class="exam-title">Psychology Paper 2</h3>
+            <p class="exam-date">Tuesday, June 3, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              1:00 PM - 3:00 PM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Approaches, Research Methods
+            </div>
+            <div class="days-left comfortable" data-days="45">45 days left</div>
+          </div>
+          
+          <div class="exam-card psychology">
+            <h3 class="exam-title">Psychology Paper 3</h3>
+            <p class="exam-date">Tuesday, June 17, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              1:00 PM - 3:00 PM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Issues & Options, Relationships
+            </div>
+            <div class="days-left comfortable" data-days="59">59 days left</div>
+          </div>
+        </div>
+        
+        <h3>📋 Psychology Revision Checklist</h3>
+        
+        <div class="card">
+          <h4>Paper 1: Introductory Topics</h4>
+          <ul class="resource-list">
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">✅</span>
+                <div>
+                  <strong>Psychopathology</strong>
+                  <div>Cornell notes completed, practice 16-marker</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">✅</span>
+                <div>
+                  <strong>Biopsychology</strong>
+                  <div>Cornell notes completed, need more practice</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <h4>Paper 2: Psychology in Context</h4>
+          <ul class="resource-list">
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">⚠️</span>
+                <div>
+                  <strong>Research Methods</strong>
+                  <div>Need to review statistical tests</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <h4>Paper 3: Issues & Options</h4>
+          <ul class="resource-list">
+            <li>
+              <div class="resource-link">
+                <span class="resource-list-icon">⚠️</span>
+                <div>
+                  <strong>Relationships</strong>
+                  <div>Need to start revision</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Sociology Exams -->
+      <div id="sociology-tab" class="tab-content hidden">
+        <h2>👥 Sociology Exams</h2>
+        
+        <div class="exam-cards">
+          <div class="exam-card sociology">
+            <h3 class="exam-title">Sociology Paper 1</h3>
+            <p class="exam-date">Thursday, May 22, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              9:00 AM - 11:00 AM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Education with Theory
+            </div>
+            <div class="days-left near" data-days="33">33 days left</div>
+          </div>
+          
+          <div class="exam-card sociology">
+            <h3 class="exam-title">Sociology Paper 2</h3>
+            <p class="exam-date">Tuesday, June 10, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              9:00 AM - 11:00 AM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Topics in Sociology
+            </div>
+            <div class="days-left comfortable" data-days="52">52 days left</div>
+          </div>
+          
+          <div class="exam-card sociology">
+            <h3 class="exam-title">Sociology Paper 3</h3>
+            <p class="exam-date">Thursday, June 19, 2025</p>
+            <div class="exam-info">
+              <span>⏰</span>
+              9:00 AM - 11:00 AM
+            </div>
+            <div class="exam-info">
+              <span>📍</span>
+              RHSH
+            </div>
+            <div class="exam-info">
+              <span>📝</span>
+              Crime & Deviance with Theory
+            </div>
+            <div class="days-left comfortable" data-days="61">61 days left</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Keep going. Small steps every day lead to big results.</p>
+      <p class="copyright">© 2025 Charlie's Exam Hub • Powered by AI</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

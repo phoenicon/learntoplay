@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlie's Exam Hub</title>
+  <meta name="description" content="Focused exam revision platform for Charlie">
+  <meta name="author" content="LearnToPlay.ai">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">📚</span>
+          Charlie's Exam Hub
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">
+            <span>🏠</span>
+            Dashboard
+          </a>
+          <a href="pages/exams.html" class="nav-link">
+            <span>📅</span>
+            Exams
+          </a>
+          <a href="pages/progress.html" class="nav-link">
+            <span>📊</span>
+            Progress
+          </a>
+          <a href="pages/resources.html" class="nav-link">
+            <span>📚</span>
+            Resources
+          </a>
+          <a href="pages/tools.html" class="nav-link">
+            <span>🛠️</span>
+            Tools
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Time Machine Indicator -->
+    <div id="time-machine-indicator" class="time-machine-indicator" style="display: none;">
+      <span>🕰️</span>
+      <span>Viewing: Present</span>
+    </div>
+
+    <section class="countdown-panel">
+      <h2 class="next-exam">Next Exam: Geography Adv Paper 1</h2>
+      <div class="countdown" id="countdown">24 days</div>
+      <p>Tuesday, May 13, 2025 • 9:00 AM • RHSH</p>
+    </section>
+    
+    <!-- Time Machine Controls -->
+    <section class="time-machine-controls">
+      <span>🕰️ Time Machine:</span>
+      <input type="date" id="time-machine-date" class="time-machine-date">
+      <button id="time-travel-btn" class="time-machine-btn">View Past State</button>
+      <button id="return-present-btn" class="time-machine-btn">Return to Present</button>
+    </section>
+    
+    <section>
+      <h2 class="section-title">
+        <span class="section-icon">📅</span>
+        Your Exam Schedule
+      </h2>
+      
+      <div class="exam-cards">
+        <div class="exam-card geography">
+          <h3 class="exam-title">Geography Adv Paper 1</h3>
+          <p class="exam-date">Tuesday, May 13, 2025</p>
+          <div class="exam-info">
+            <span>⏰</span>
+            9:00 AM - 11:30 AM
+          </div>
+          <div class="exam-info">
+            <span>📍</span>
+            RHSH
+          </div>
+          <div class="exam-info">
+            <span>📝</span>
+            Water & Carbon Cycles, Hazards
+          </div>
+          <div class="days-left" data-days="24">24 days left</div>
+        </div>
+        
+        <div class="exam-card psychology">
+          <h3 class="exam-title">Psychology Paper 1</h3>
+          <p class="exam-date">Monday, May 19, 2025</p>
+          <div class="exam-info">
+            <span>⏰</span>
+            1:00 PM - 3:00 PM
+          </div>
+          <div class="exam-info">
+            <span>📍</span>
+            RHSH
+          </div>
+          <div class="exam-info">
+            <span>📝</span>
+            Psychopathology, Biopsychology
+          </div>
+          <div class="days-left" data-days="30">30 days left</div>
+        </div>
+        
+        <div class="exam-card sociology">
+          <h3 class="exam-title">Sociology Paper 1</h3>
+          <p class="exam-date">Thursday, May 22, 2025</p>
+          <div class="exam-info">
+            <span>⏰</span>
+            9:00 AM - 11:00 AM
+          </div>
+          <div class="exam-info">
+            <span>📍</span>
+            RHSH
+          </div>
+          <div class="exam-info">
+            <span>📝</span>
+            Education, Methods, Theory
+          </div>
+          <div class="days-left" data-days="33">33 days left</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- API Integration Section -->
+    <section class="api-integration-section">
+      <h2 class="api-integration-title">
+        AI-Powered Learning
+        <span id="twelve-labs-status" class="api-status disconnected">Disconnected</span>
+      </h2>
+      <p>Your learning is enhanced with Twelve Labs AI video analysis and Pinecone vector database for personalized recommendations.</p>
+      
+      <div class="api-placeholder">
+        // API Integration Point: Twelve Labs AI
+        // This section will display AI-generated study recommendations
+        // based on your learning patterns and content analysis.
+      </div>
+      
+      <div class="subject-footer">
+        <div class="subject-meta">
+          <div class="meta-item">
+            <span>🧠</span>
+            AI-Powered
+          </div>
+          <div class="meta-item">
+            <span>🔄</span>
+            Auto-updating
+          </div>
+        </div>
+        <a href="pages/ai-recommendations.html" class="btn btn-sm">View All Recommendations</a>
+      </div>
+    </section>
+    
+    <section>
+      <h2 class="section-title">
+        <span class="section-icon">📚</span>
+        Your Subjects
+      </h2>
+      
+      <div class="subject-grid">
+        <div class="subject-card">
+          <div class="subject-color color-geography"></div>
+          <div class="subject-content">
+            <h3 class="subject-title">
+              <span>🌍</span>
+              Geography
+            </h3>
+            <p class="subject-info">Advanced Level • 2 Papers</p>
+            
+            <div class="progress-wrapper">
+              <div class="progress-info">
+                <span>Overall Progress</span>
+                <span>75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-value progress-geography"></div>
+              </div>
+            </div>
+            
+            <div class="subject-footer">
+              <div class="subject-meta">
+                <div class="meta-item">
+                  <span>📝</span>
+                  4 Topics
+                </div>
+                <div class="meta-item">
+                  <span>📊</span>
+                  2 Practice Papers
+                </div>
+              </div>
+              <a href="pages/geography.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="subject-card">
+          <div class="subject-color color-psychology"></div>
+          <div class="subject-content">
+            <h3 class="subject-title">
+              <span>🧠</span>
+              Psychology
+            </h3>
+            <p class="subject-info">Advanced Level • 3 Papers</p>
+            
+            <div class="progress-wrapper">
+              <div class="progress-info">
+                <span>Overall Progress</span>
+                <span>60%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-value progress-psychology"></div>
+              </div>
+            </div>
+            
+            <div class="subject-footer">
+              <div class="subject-meta">
+                <div class="meta-item">
+                  <span>📝</span>
+                  6 Topics
+                </div>
+                <div class="meta-item">
+                  <span>📊</span>
+                  1 Practice Paper
+                </div>
+              </div>
+              <a href="pages/psychology.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="subject-card">
+          <div class="subject-color color-sociology"></div>
+          <div class="subject-content">
+            <h3 class="subject-title">
+              <span>👥</span>
+              Sociology
+            </h3>
+            <p class="subject-info">Advanced Level • 3 Papers</p>
+            
+            <div class="progress-wrapper">
+              <div class="progress-info">
+                <span>Overall Progress</span>
+                <span>85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-value progress-sociology"></div>
+              </div>
+            </div>
+            
+            <div class="subject-footer">
+              <div class="subject-meta">
+                <div class="meta-item">
+                  <span>📝</span>
+                  5 Topics
+                </div>
+                <div class="meta-item">
+                  <span>📊</span>
+                  3 Practice Papers
+                </div>
+              </div>
+              <a href="pages/sociology.html" class="btn btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="two-columns">
+      <section>
+        <h2 class="section-title">
+          <span class="section-icon">🛠️</span>
+          Study Tools
+        </h2>
+        
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon">📋</div>
+            <h3 class="resource-title">Cornell Notes</h3>
+            <p class="resource-description">Create structured notes with cues, content, and summary sections for better recall.</p>
+            <a href="pages/tools.html#cornell" class="btn btn-sm">Use Tool</a>
+          </div>
+          
+          <div class="resource-card">
+            <div class="resource-icon">✍️</div>
+            <h3 class="resource-title">Answer Writer</h3>
+            <p class="resource-description">Practice writing full answers to past paper questions with self-assessment.</p>
+            <a href="pages/tools.html#answer-writer" class="btn btn-sm">Use Tool</a>
+          </div>
+          
+          <div class="resource-card">
+            <div class="resource-icon">📊</div>
+            <h3 class="resource-title">Progress Tracker</h3>
+            <p class="resource-description">Track your daily focus, confidence, and overall revision progress.</p>
+            <a href="pages/tools.html#progress-tracker" class="btn btn-sm">Use Tool</a>
+          </div>
+          
+          <div class="resource-card">
+            <div class="resource-icon">🧱</div>
+            <h3 class="resource-title">Essay Planners</h3>
+            <p class="resource-description">Structure your essays with subject-specific templates for maximum marks.</p>
+            <a href="pages/tools.html#essay-planners" class="btn btn-sm">Use Tool</a>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2 class="section-title">
+          <span class="section-icon">⚠️</span>
+          Focus Areas
+        </h2>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">📊</div>
+            <h3 class="card-title">Weak Areas</h3>
+          </div>
+          
+          <ul class="weak-areas-list">
+            <li>
+              <span class="weak-areas-icon">⚠️</span>
+              <div>
+                <strong>Psychology:</strong> Research Methods
+                <div style="font-size: 0.875rem; color: var(--text-muted);">Last practice: 3 weeks ago</div>
+              </div>
+            </li>
+            <li>
+              <span class="weak-areas-icon">⚠️</span>
+              <div>
+                <strong>Geography:</strong> Urban Environments
+                <div style="font-size: 0.875rem; color: var(--text-muted);">Last practice: 2 weeks ago</div>
+              </div>
+            </li>
+            <li>
+              <span class="weak-areas-icon">⚠️</span>
+              <div>
+                <strong>Sociology:</strong> Theory & Methods
+                <div style="font-size: 0.875rem; color: var(--text-muted);">Last practice: 10 days ago</div>
+              </div>
+            </li>
+          </ul>
+          
+          <a href="pages/focus-areas.html" class="btn btn-sm">View All</a>
+        </div>
+        
+        <div class="mark-tip">
+          <h3 class="mark-tip-title">
+            <span>💡</span>
+            Exam Tip
+          </h3>
+          <p class="mark-tip-content">For 16+ mark questions, always include at least 2 AO3 evaluation points with contrasting perspectives.</p>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Pinecone Integration Section -->
+    <section class="api-integration-section">
+      <h2 class="api-integration-title">
+        Vector Database Storage
+        <span id="pinecone-status" class="api-status disconnected">Disconnected</span>
+      </h2>
+      <p>Your notes and progress are stored in Pinecone vector database for efficient retrieval and time-machine functionality.</p>
+      
+      <div class="api-placeholder">
+        // API Integration Point: Pinecone Vector Database
+        // This section will display your stored notes and progress data
+        // with semantic search capabilities.
+      </div>
+      
+      <div class="subject-footer">
+        <div class="subject-meta">
+          <div class="meta-item">
+            <span>🔍</span>
+            Semantic Search
+          </div>
+          <div class="meta-item">
+            <span>🔄</span>
+            Real-time Updates
+          </div>
+        </div>
+        <a href="pages/vector-search.html" class="btn btn-sm">Search Your Notes</a>
+      </div>
+    </section>
+    
+    <!-- AMD GPU Acceleration Section -->
+    <section class="api-integration-section">
+      <h2 class="api-integration-title">
+        GPU Acceleration
+        <span id="amd-status" class="api-status disconnected">Disconnected</span>
+      </h2>
+      <p>AMD GPU acceleration powers the AI features and computational tasks for faster performance.</p>
+      
+      <div class="api-placeholder">
+        // API Integration Point: AMD GPU Acceleration
+        // This section will display GPU acceleration status and performance metrics.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Keep going. Small steps every day lead to big results.</p>
+      <p class="copyright">© 2025 Charlie's Exam Hub • Powered by AI</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/api-integration.js"></script>
+  <script src="js/time-machine.js"></script>
+</body>
+</html>

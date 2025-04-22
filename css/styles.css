@@ -1,0 +1,893 @@
+:root {
+  --primary: #4361ee;
+  --primary-light: #4361ee30;
+  --dark: #121212;
+  --darker: #0a0a0a;
+  --text: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --card-bg: #1e1e1e;
+  --card-highlight: #282828;
+  --border: #333333;
+  --shadow: 0 4px 6px rgba(0,0,0,0.3);
+  --red: #ff5a5a;
+  --amber: #ffaa5a;
+  --green: #5aff8a;
+  --purple: #ae5aff;
+  --geography: #10b981;
+  --psychology: #ec4899;
+  --sociology: #8b5cf6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--dark);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--darker);
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary);
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.countdown-panel {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.next-exam {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.countdown {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
+}
+
+.exam-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.exam-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+.exam-card.geography {
+  border-left-color: var(--geography);
+}
+
+.exam-card.psychology {
+  border-left-color: var(--psychology);
+}
+
+.exam-card.sociology {
+  border-left-color: var(--sociology);
+}
+
+.exam-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.exam-date {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.exam-info {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.days-left {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.days-left.urgent {
+  background-color: rgba(255, 90, 90, 0.2);
+  color: var(--red);
+}
+
+.days-left.near {
+  background-color: rgba(255, 170, 90, 0.2);
+  color: var(--amber);
+}
+
+.days-left.comfortable {
+  background-color: rgba(90, 255, 138, 0.2);
+  color: var(--green);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-icon {
+  color: var(--primary);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  background-color: var(--card-highlight);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  margin-right: 0.75rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.subject-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  background-color: var(--card-highlight);
+}
+
+.subject-color {
+  height: 8px;
+}
+
+.color-geography {
+  background-color: var(--geography);
+}
+
+.color-psychology {
+  background-color: var(--psychology);
+}
+
+.color-sociology {
+  background-color: var(--sociology);
+}
+
+.subject-content {
+  padding: 1.5rem;
+}
+
+.subject-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subject-info {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.progress-wrapper {
+  margin-bottom: 1rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-value {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-geography {
+  background-color: var(--geography);
+  width: 75%;
+}
+
+.progress-psychology {
+  background-color: var(--psychology);
+  width: 60%;
+}
+
+.progress-sociology {
+  background-color: var(--sociology);
+  width: 85%;
+}
+
+.subject-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.subject-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn:hover {
+  background-color: #3a56e4;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.resource-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  background-color: var(--card-highlight);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.resource-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.resource-description {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.resource-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.tab-container {
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-muted);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.tab:hover {
+  background-color: var(--card-highlight);
+}
+
+.tab.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.tab-content {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+.resource-list {
+  list-style: none;
+}
+
+.resource-list li {
+  margin-bottom: 1rem;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.resource-link:hover {
+  background-color: var(--card-highlight);
+}
+
+.resource-list-icon {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.weak-areas-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.weak-areas-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.weak-areas-list li:last-child {
+  border-bottom: none;
+}
+
+.weak-areas-icon {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .two-columns {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.message-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.message-name {
+  font-weight: 600;
+}
+
+.message-time {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+.message-content {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.message-signature {
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.footer {
+  background-color: var(--darker);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-text {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.mark-tip {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+}
+
+.mark-tip-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mark-tip-content {
+  color: var(--text-muted);
+}
+
+.mark-tip-strategies {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.mark-tip-strategies li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.mark-tip-strategies li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.table th {
+  background-color: var(--card-highlight);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.accent-geography {
+  color: var(--geography);
+}
+
+.accent-psychology {
+  color: var(--psychology);
+}
+
+.accent-sociology {
+  color: var(--sociology);
+}
+
+/* Cornell Notes Style */
+.cornell-container {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 1rem;
+  color: var(--text);
+}
+
+.cornell-cues {
+  border-right: 2px solid var(--border);
+  padding-right: 1rem;
+}
+
+.cornell-cues h3, .cornell-notes h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.cornell-cues ul {
+  list-style-type: square;
+  padding-left: 1rem;
+  color: var(--text);
+}
+
+.cornell-summary {
+  border-top: 2px solid var(--border);
+  margin: 2rem auto 1rem auto;
+  max-width: 900px;
+  padding-top: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--card-bg);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+}
+
+/* Tool Styles */
+.tool-container {
+  max-width: 850px;
+  margin: 2rem auto;
+  font-family: 'Inter', sans-serif;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: var(--text);
+}
+
+.tool-container h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.tool-container textarea, 
+.tool-container input[type="text"],
+.tool-container select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: var(--darker);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 0.5rem;
+}
+
+.tool-container button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.tool-container button:hover {
+  background-color: #3a56e4;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    gap: 1rem;
+  }
+  
+  .cornell-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .cornell-cues {
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .countdown {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* API Integration Placeholder Styles */
+.api-integration-section {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--purple);
+}
+
+.api-integration-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--purple);
+}
+
+.api-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.api-status.connected {
+  background-color: rgba(90, 255, 138, 0.2);
+  color: var(--green);
+}
+
+.api-status.disconnected {
+  background-color: rgba(255, 90, 90, 0.2);
+  color: var(--red);
+}
+
+.api-placeholder {
+  background-color: var(--darker);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+/* Time Machine Feature */
+.time-machine-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.time-machine-date {
+  flex-grow: 1;
+  padding: 0.5rem;
+  background-color: var(--darker);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 0.5rem;
+}
+
+.time-machine-btn {
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.time-machine-btn:hover {
+  background-color: #9a4aee;
+}
+
+.time-machine-indicator {
+  position: fixed;
+  top: 4.5rem;
+  right: 1rem;
+  background-color: var(--purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

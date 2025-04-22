@@ -1,0 +1,204 @@
+/* Additional responsive design enhancements */
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+  .nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
+  
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Improve mobile header */
+  .header-content {
+    padding: 0.5rem 0;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  /* Adjust countdown panel */
+  .countdown-panel {
+    padding: 1rem;
+  }
+  
+  .next-exam {
+    font-size: 1.1rem;
+  }
+  
+  .countdown {
+    font-size: 2rem;
+  }
+  
+  /* Improve card layouts */
+  .exam-cards, .subject-grid, .resource-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust section titles */
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  /* Improve table responsiveness */
+  .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Time machine controls */
+  .time-machine-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .time-machine-date {
+    width: 100%;
+  }
+  
+  .time-machine-btn {
+    width: 100%;
+  }
+  
+  /* Tab improvements */
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tab {
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Tool container improvements */
+  .tool-container {
+    padding: 1rem;
+  }
+  
+  /* API integration section */
+  .api-integration-section {
+    padding: 1rem;
+  }
+  
+  .api-integration-title {
+    font-size: 1.1rem;
+  }
+  
+  /* Cornell notes mobile improvements */
+  .cornell-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .cornell-cues {
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Small screen adjustments */
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+    }
+    
+    .card, .exam-card, .subject-card, .resource-card {
+      padding: 1rem;
+    }
+    
+    .btn {
+      padding: 0.5rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.2rem;
+    }
+    
+    .countdown {
+      font-size: 1.5rem;
+    }
+    
+    .tab-content {
+      padding: 1rem;
+    }
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  header, footer, .api-integration-section, .btn, .nav {
+    display: none;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .cornell-container, .cornell-summary {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .card, .exam-card, .subject-card, .resource-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Accessibility improvements */
+:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn:focus, .nav-link:focus, .tab:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #0000ff;
+    --text: #ffffff;
+    --dark: #000000;
+    --card-bg: #121212;
+    --border: #ffffff;
+  }
+  
+  .btn, .tab.active {
+    background-color: #0000ff;
+    color: white;
+    border: 1px solid white;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Tools - Charlie's Exam Hub</title>
+  <meta name="description" content="Study tools for exam revision">
+  <meta name="author" content="LearnToPlay.ai">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">📚</span>
+          Charlie's Exam Hub
+        </a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">
+            <span>🏠</span>
+            Dashboard
+          </a>
+          <a href="exams.html" class="nav-link">
+            <span>📅</span>
+            Exams
+          </a>
+          <a href="progress.html" class="nav-link">
+            <span>📊</span>
+            Progress
+          </a>
+          <a href="resources.html" class="nav-link">
+            <span>📚</span>
+            Resources
+          </a>
+          <a href="tools.html" class="nav-link active">
+            <span>🛠️</span>
+            Tools
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">
+      <span class="section-icon">🛠️</span>
+      Study Tools
+    </h1>
+    
+    <div class="tab-container">
+      <div class="tabs">
+        <div class="tab active" data-target="cornell-tab">Cornell Notes</div>
+        <div class="tab" data-target="answer-writer-tab">Answer Writer</div>
+        <div class="tab" data-target="daily-focus-tab">Daily Focus</div>
+        <div class="tab" data-target="essay-planners-tab">Essay Planners</div>
+      </div>
+      
+      <!-- Cornell Notes Tool -->
+      <div id="cornell-tab" class="tab-content">
+        <div class="tool-container">
+          <h2>✨ Cornellifier Tool</h2>
+          <p><strong>Paste any block of revision text below — we'll help break it down into the Cornell Note format:</strong> Cues (Questions), Notes, and Summary.</p>
+
+          <label for="sourceText"><strong>Paste Source Text:</strong></label><br>
+          <textarea id="sourceText" rows="10" placeholder="Paste a chunk of PMT, Tutor2U, class notes or even textbook content..."></textarea>
+
+          <button id="cornellify-btn">Cornellify This</button>
+
+          <div class="cornell-container">
+            <div class="cornell-cues">
+              <h3>Cues / Prompts</h3>
+              <div id="cues-container">
+                <p><em>Auto-generated questions will appear here based on your source.</em></p>
+              </div>
+            </div>
+            <div class="cornell-notes">
+              <h3>Notes</h3>
+              <div id="notes-container">
+                <p><em>Cleaned up and structured bullet points from your content will show here.</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="cornell-summary">
+            <h3>📝 Summary</h3>
+            <div id="summary-container">
+              <p><em>A brief summary to help with revision recall will go here.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Answer Writer Tool -->
+      <div id="answer-writer-tab" class="tab-content hidden">
+        <div class="tool-container">
+          <h2>✍️ Practice Answer Writer</h2>
+          <p><strong>Use this space to write full answers to past paper questions. Focus on structure, clarity, and balance between AO1 / AO2 / AO3.</strong></p>
+
+          <form id="practice-answer-form">
+            <label for="questionInput"><strong>Question:</strong></label><br>
+            <input type="text" id="questionInput" placeholder="e.g. Discuss the biological approach to explaining OCD (16 marks)">
+
+            <label for="answerInput"><strong>Your Answer:</strong></label><br>
+            <textarea id="answerInput" rows="12" placeholder="Write your full answer here..."></textarea>
+
+            <label for="selfAssessment"><strong>Self Assessment (optional):</strong></label><br>
+            <select id="selfAssessment">
+              <option value="not-set">Rate your answer...</option>
+              <option value="5">🔥 Nailed it</option>
+              <option value="4">💪 Strong structure</option>
+              <option value="3">😐 Needs polish</option>
+              <option value="2">😬 Confused or incomplete</option>
+              <option value="1">🧠 Lost the plot</option>
+            </select>
+
+            <button type="submit">Save Answer</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Daily Focus Tracker -->
+      <div id="daily-focus-tab" class="tab-content hidden">
+        <div class="tool-container">
+          <h2>📅 Daily Focus Tracker</h2>
+          <p><strong>Use this space to track your daily revision effort and stay consistent. Small wins every day = exam success.</strong></p>
+
+          <form id="focus-tracker-form">
+            <label for="todayTopic"><strong>1. What topic did you revise today?</strong></label><br>
+            <input type="text" id="todayTopic" name="todayTopic" placeholder="e.g. Biopsychology - Synaptic Transmission">
+
+            <label for="nextFocus"><strong>2. What topic are you focusing on next?</strong></label><br>
+            <input type="text" id="nextFocus" name="nextFocus" placeholder="e.g. Urban Environments - 20 marker practice">
+
+            <label for="confidence"><strong>3. How confident do you feel today?</strong></label><br>
+            <select id="confidence" name="confidence">
+              <option value="5">🔥 Super confident</option>
+              <option value="4">😎 Pretty solid</option>
+              <option value="3">😐 Bit unsure</option>
+              <option value="2">😟 Struggled today</option>
+              <option value="1">🧠 Felt overwhelmed</option>
+            </select>
+
+            <label for="note"><strong>4. Notes or reflections (optional)</strong></label><br>
+            <textarea id="note" name="note" rows="4" placeholder="e.g. Did 1 past paper, still confused on AO3 for OCD"></textarea>
+
+            <button type="submit">Save Entry</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Essay Planners -->
+      <div id="essay-planners-tab" class="tab-content hidden">
+        <div class="tool-container">
+          <h2>🧱 Essay Planners</h2>
+          <p><strong>Choose a subject and essay type to get a structured planner for your answer.</strong></p>
+          
+          <div class="tabs">
+            <div class="tab active" data-target="geo-20-tab">Geography 20-Marker</div>
+            <div class="tab" data-target="geo-9-tab">Geography 9-Marker</div>
+            <div class="tab" data-target="psych-8-tab">Psychology 8-Marker</div>
+          </div>
+          
+          <!-- Geography 20-Marker -->
+          <div id="geo-20-tab" class="tab-content">
+            <h2>🧱 Geography 20-Marker Answer Planner</h2>
+            
+            <p><strong>Goal:</strong> Structure and write a high-quality 20-mark answer with good AO1, AO2, and AO3 balance in under 25 minutes.</p>
+
+            <h3>🧠 Step 1: Understand the Command Word (1 min)</h3>
+            <ul>
+              <li>Highlight what it's asking you to do: <strong>evaluate, discuss, to what extent, assess</strong></li>
+              <li>Re-write the question in your own words</li>
+            </ul>
+
+            <h3>🧱 Step 2: Plan Your Structure (3–4 min)</h3>
+            <ul>
+              <li><strong>Introduction:</strong> Brief context + define key terms</li>
+              <li><strong>Main Point 1:</strong> AO1 + explanation + case study + mini conclusion</li>
+              <li><strong>Main Point 2:</strong> AO1 + explanation + contrasting case/example + evaluation</li>
+              <li><strong>Main Point 3 (Optional):</strong> AO2/interaction or human/physical link</li>
+              <li><strong>Conclusion:</strong> Return to question + weigh up overall judgement</li>
+            </ul>
+
+            <h3>⏳ Suggested Time Breakdown (25 min total)</h3>
+            <ul>
+              <li>Plan – 4 min</li>
+              <li>Write each section – 18 min</li>
+              <li>Quick check/edit – 2–3 min</li>
+            </ul>
+
+            <h3>📌 Key Reminders</h3>
+            <ul>
+              <li>Always include <strong>at least 2 named examples/case studies</strong></li>
+              <li>Use connectives: <em>"This suggests…" "However…" "On the other hand…"</em></li>
+              <li>Link each paragraph clearly back to the question (mini-conclusions)</li>
+              <li>Don't waffle. Prioritise <strong>clarity, evaluation, and application</strong></li>
+            </ul>
+
+            <h3>✅ Checklist (tick as you go)</h3>
+            <ul>
+              <li>[ ] Rephrased the question</li>
+              <li>[ ] Wrote a clear introduction</li>
+              <li>[ ] Included 2+ detailed examples</li>
+              <li>[ ] Made a judgement in each paragraph</li>
+              <li>[ ] Wrote a conclusion that answers the question</li>
+              <li>[ ] Proofread for links and balance</li>
+            </ul>
+          </div>
+          
+          <!-- Geography 9-Marker -->
+          <div id="geo-9-tab" class="tab-content hidden">
+            <h2>🧱 Geography 9-Marker Answer Planner</h2>
+            
+            <p><strong>Goal:</strong> Build a strong, structured answer to 9-mark questions using 3 clear points and timed structure.</p>
+
+            <h3>⏱️ Time Plan (Max 10 min)</h3>
+            <ul>
+              <li>Plan – 2 min</li>
+              <li>Write – 7 min</li>
+              <li>Review – 1 min</li>
+            </ul>
+
+            <h3>📌 Suggested Structure (Mini PEEL x3)</h3>
+            <ul>
+              <li><strong>Point 1:</strong> Clear idea + definition</li>
+              <li><strong>Explain:</strong> Link to question + detail</li>
+              <li><strong>Example:</strong> Use a specific case or stat</li>
+              <li><strong>Evaluate:</strong> Mini judgement (optional)</li>
+            </ul>
+            <p>Repeat x2 more for Point 2 and Point 3</p>
+
+            <h3>✅ Checklist</h3>
+            <ul>
+              <li>[ ] 3 clear points included</li>
+              <li>[ ] At least 1 named example or stat</li>
+              <li>[ ] Used keywords from the question</li>
+              <li>[ ] Stayed focused on the question</li>
+              <li>[ ] Optional mini conclusion added</li>
+            </ul>
+
+            <h3>🧠 Example Question</h3>
+            <p><em>"Assess the importance of precipitation and evapotranspiration in the water cycle." (9 marks)</em></p>
+          </div>
+          
+          <!-- Psychology 8-Marker -->
+          <div id="psych-8-tab" class="tab-content hidden">
+            <h2>🧱 Psychology 8-Marker Answer Planner</h2>
+
+            <p><strong>Goal:</strong> Write a clear, well-balanced 8-marker with focus on AO1 (description) and AO3 (evaluation) skills.</p>
+
+            <h3>⏱️ Time Plan (Max 10 min)</h3>
+            <ul>
+              <li>Plan – 2 min</li>
+              <li>Write – 7 min</li>
+              <li>Check – 1 min</li>
+            </ul>
+
+            <h3>📌 Suggested Structure</h3>
+            <ol>
+              <li><strong>AO1:</strong> Brief explanation/description of key theory, model or study</li>
+              <li><strong>AO3:</strong> First evaluation point (strength or limitation)</li>
+              <li><strong>AO3:</strong> Second evaluation point (contrast or develop)</li>
+              <li><strong>Mini conclusion:</strong> (optional) Quick summary/judgement</li>
+            </ol>
+
+            <h3>✅ Checklist</h3>
+            <ul>
+              <li>[ ] Clear definition or explanation (AO1)</li>
+              <li>[ ] Two AO3 points (evaluation)</li>
+              <li>[ ] Used a study/example to support</li>
+              <li>[ ] Answer links to the question throughout</li>
+              <li>[ ] Mini conclusion or final judgement if time</li>
+            </ul>
+
+            <h3>🧠 Example Question</h3>
+            <p><em>"Outline and evaluate the cognitive approach in psychology." (8 marks)</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Keep going. Small steps every day lead to big results.</p>
+      <p class="copyright">© 2025 Charlie's Exam Hub • Powered by AI</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
